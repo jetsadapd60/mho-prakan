@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +26,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  />
+</head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white text-slate-900`}
       >
         <Navbar />
-        <main className="mx-auto max-w-5xl px-6 py-12">{children}</main>
+        <main>{children}</main>
+         <Footer />
       </body>
     </html>
   );

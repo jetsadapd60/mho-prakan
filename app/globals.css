@@ -1,14 +1,61 @@
 @import "tailwindcss";
 
-@theme {
-  --font-poppins: Poppins, sans-serif;
+@font-face {
+  font-family: "Prompt";
+  src: url("/fonts/Prompt/Prompt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 
-  --color-primary: #FF66C4;
-  --color-secondary: #7F1D93;
-  --color-accent: #FACC15;
+@font-face {
+  font-family: "Prompt";
+  src: url("/fonts/Prompt/Prompt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("/fonts/Prompt/Prompt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Prompt";
+  src: url("/fonts/Prompt/Prompt-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* ใช้กำหนด theme */
+@theme {
+  /* font */
+  --font-sans: Prompt, sans-serif;
+
+  /* font scale */
+  --text-h1: 2.25rem; /* 36px */
+  --text-h2: 1.875rem; /* 30px */
+  --text-h3: 1.5rem; /* 24px */
+  --text-body: 1rem; /* 16px */
+  --text-caption: 0.875rem; /* 14px */
+  --text-button: 1rem; /* 16px */
+
+  /* colors */
+  --color-primary: #ff66c4;
+  --color-secondary: #7f1d93;
+  --color-accent: #facc15;
   --color-neutral: #383838;
-  --color-info: #4B5563;
-  --color-success: #23B900;
-  --color-warning: #FFDB00;
-  --color-error: #FF351C;
+  --color-info: #4b5563;
+  --color-success: #23b900;
+  --color-warning: #ffdb00;
+  --color-error: #ff351c;
+  --color-white: #ffffff;
+  --color-sky: #4eadff;
+}
+
+/* ใช้ Prompt เป็น default */
+html,
+body {
+  font-family: var(--font-sans);
 }
